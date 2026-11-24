@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Assignment: 4.6 Performance Assessment: Storage Central
+        Author: Rodrigue Sifor OUAMBO V MBOLIYOU (OU26049981)
+        Date: November 24, 2026
+        Purpose: Willow & Pine Crafts storefront. Shows six handmade products
+                 and a shopping cart. The cart is saved in localStorage, the
+                 number of items added this session is kept in sessionStorage,
+                 and the last purchased products are kept in a cookie.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willow & Pine Crafts</title>
+
+    <!-- Link the external stylesheet and the external JavaScript file -->
+    <link rel="stylesheet" href="PA_Storage-Central_StarterFile.css">
+    <script src="PA_Storage-Central_StarterFile.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Willow & Pine Crafts</h1>
+            <!-- Quick cart summary in the header -->
+            <a href="#cart" class="header-cart" id="header-cart">
+                Cart: <span id="header-count">0</span> items
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <h2>Handmade With Care</h2>
+            <p id="welcome-message"></p>
+        </section>
+
+        <!-- Product cards are created by JavaScript -->
+        <section class="products-section" aria-labelledby="products-title">
+            <h2 id="products-title" class="section-title">Shop Our Crafts</h2>
+            <section class="product-grid" id="product-grid"></section>
+        </section>
+    </main>
+
+    <!-- Shopping cart panel -->
+    <aside id="cart" class="cart-panel" aria-labelledby="cart-title">
+        <h2 id="cart-title">Your Cart</h2>
+
+        <!-- Totals: number of products and cost -->
+        <p class="cart-summary">
+            Items in cart: <strong id="cart-count">0</strong>
+        </p>
+
+        <section id="cart-items" class="cart-items" aria-live="polite">
+            <p class="empty">Your cart is empty.</p>
+        </section>
+
+        <p class="cart-total">Total: <strong id="cart-total">$0.00</strong></p>
+
+        <section class="cart-buttons">
+            <button id="checkout-btn" type="button">Checkout</button>
+            <button id="clear-btn" type="button" class="secondary">Clear Cart</button>
+        </section>
+
+        <!-- Browser storage readouts -->
+        <section class="storage-info">
+            <h3>Your Shopping Activity</h3>
+            <p>Items added this session: <strong id="session-count">0</strong></p>
+            <p>Last purchased: <span id="last-purchased">No purchases yet</span></p>
+        </section>
+    </aside>
+
+    <!-- Notification shown when an item is added -->
+    <p id="notification" class="notification" role="status" aria-live="polite"></p>
+
+    <footer>
+        <p>Willow & Pine Crafts &copy; 2026 &bull; Shop owner: OU26049981</p>
+    </footer>
+</body>
+</html>
