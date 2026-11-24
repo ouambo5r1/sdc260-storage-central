@@ -49,6 +49,11 @@ main {
     padding-right: 360px;
 }
 
+/* Keep the header cart link visible to the left of the fixed cart panel */
+header {
+    padding-right: calc(340px + 2rem);
+}
+
 /* =========================================
      HERO
 ========================================= */
@@ -336,6 +341,10 @@ footer {
 @media (max-width: 900px) {
     main {
         padding-right: 0;
+    }
+
+    header {
+        padding-right: 2rem;
     }
 
     /* The cart moves under the products on small screens */
